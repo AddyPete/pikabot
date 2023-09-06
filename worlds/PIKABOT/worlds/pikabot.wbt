@@ -36,8 +36,8 @@ WorldInfo {
 }
 Viewpoint {
   fieldOfView 0.5
-  orientation -0.17229492658499482 0.24985750874926277 0.9528303540477093 1.2386584549969755
-  position -0.9314765950550707 -4.977531514978585 1.8531958319612376
+  orientation -0.001435299244807347 0.004704613770680953 -0.9999879031895069 4.89619121191663
+  position 0.31325173711184356 -2.5488629163681362 0.5056395859670034
   near 1
   follow "TIAGo Iron"
   followType "None"
@@ -801,6 +801,94 @@ Robot {
         Pose {
           rotation 0 0.7071032811764938 0.7071102811792772 3.141585
           children [
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0 1 0
+                anchor -0.046 0 0
+              }
+              device [
+                RotationalMotor {
+                  name "LDS-01_secondary_motor"
+                  maxVelocity 150
+                }
+              ]
+              endPoint Solid {
+                translation 0 -0.01 0
+                rotation 1 0 0 -1.5708
+                children [
+                  Transform {
+                    scale 0.001 0.001 0.001
+                    children [
+                      Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.886671 0.833646 0.78027
+                          metalness 0
+                        }
+                        geometry Mesh {
+                          url [
+                            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/devices/robotis/protos/meshes/wheel.obj"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0 1 0
+              }
+              device [
+                RotationalMotor {
+                  name "LDS-01_main_motor"
+                  maxVelocity 40
+                }
+              ]
+              endPoint Solid {
+                translation 0 -0.01 0
+                rotation 1 0 0 -1.5708
+                children [
+                  Transform {
+                    scale 0.001 0.001 0.001
+                    children [
+                      Shape {
+                        appearance DEF MAIN_APPEARANCE PBRAppearance {
+                          baseColor 0 0 0
+                          roughnessMap ImageTexture {
+                            url [
+                              "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/rough_polymer/rough_polymer_roughness.jpg"
+                            ]
+                          }
+                          metalness 0
+                          normalMap ImageTexture {
+                            url [
+                              "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/rough_polymer/rough_polymer_normal.jpg"
+                            ]
+                          }
+                          normalMapFactor 2
+                          occlusionMap ImageTexture {
+                            url [
+                              "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/rough_polymer/rough_polymer_occlusion.jpg"
+                            ]
+                          }
+                          occlusionMapStrength 2
+                          textureTransform TextureTransform {
+                            scale 4 4
+                          }
+                        }
+                        geometry Mesh {
+                          url [
+                            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/devices/robotis/protos/meshes/turret.obj"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+                name "lower"
+              }
+            }
             Solid {
               translation 0 -0.01 0
               rotation -1 0 0 1.5708
@@ -811,6 +899,44 @@ Robot {
                 }
               ]
               name "lidar_solid"
+            }
+            Transform {
+              translation 0 -0.01 0
+              rotation -1 0 0 1.5708
+              scale 0.001 0.001 0.001
+              children [
+                Shape {
+                  appearance DEF MAIN_APPEARANCE PBRAppearance {
+                    baseColor 0 0 0
+                    roughnessMap ImageTexture {
+                      url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/rough_polymer/rough_polymer_roughness.jpg"
+                      ]
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                      url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/rough_polymer/rough_polymer_normal.jpg"
+                      ]
+                    }
+                    normalMapFactor 2
+                    occlusionMap ImageTexture {
+                      url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/rough_polymer/rough_polymer_occlusion.jpg"
+                      ]
+                    }
+                    occlusionMapStrength 2
+                    textureTransform TextureTransform {
+                      scale 4 4
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/devices/robotis/protos/meshes/base.obj"
+                    ]
+                  }
+                }
+              ]
             }
           ]
         }
