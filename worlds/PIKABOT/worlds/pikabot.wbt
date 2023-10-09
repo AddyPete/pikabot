@@ -21,7 +21,6 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/computers/protos/Monitor.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/computers/protos/Keyboard.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/chairs/protos/OfficeChair.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Rubber.proto"
 
 WorldInfo {
   info [
@@ -36,8 +35,8 @@ WorldInfo {
 }
 Viewpoint {
   fieldOfView 0.5
-  orientation -0.001435299244807347 0.004704613770680953 -0.9999879031895069 4.89619121191663
-  position 0.31325173711184356 -2.5488629163681362 0.5056395859670034
+  orientation 0.5503434970050843 -0.3118939201019859 -0.7744961058053363 3.973234044305741
+  position 1.0612563358957623 -0.7629631482150627 1.4589129822252007
   near 1
   follow "TIAGo Iron"
   followType "None"
@@ -689,7 +688,7 @@ Robot {
       children [
         DEF BODY CadShape {
           url [
-            "/home/homepc/ros2_ws/src/pikabot/worlds/PIKABOT/models/pika.mtl.obj"
+            "../models/pika.obj"
           ]
         }
       ]
@@ -711,17 +710,22 @@ Robot {
         translation -0.14 0.3 0.0900001
         rotation 1 4.1214851345217515e-16 2.355134362583858e-16 1.570799999999998
         children [
-          DEF WHEEL Shape {
-            appearance Rubber {
-            }
-            geometry DEF LEFT_WHEEL Cylinder {
-              height 0.07
-              radius 0.13
-            }
+          Pose {
+            translation 0 -0.132 0
+            children [
+              CadShape {
+                url [
+                  "../models/hover_board_wheel.obj"
+                ]
+              }
+            ]
           }
         ]
         name "left_wheel_solid"
-        boundingObject USE LEFT_WHEEL
+        boundingObject DEF LEFT_WHEEL Cylinder {
+          height 0.07
+          radius 0.13
+        }
         physics Physics {
         }
       }
@@ -743,10 +747,23 @@ Robot {
         translation -0.14 -0.3 0.0900001
         rotation 1 4.710268725167725e-16 -1.5700895750559078e-16 1.5707999999999944
         children [
-          USE WHEEL
+          Pose {
+            translation 0 -0.132 0
+            rotation 0 1 0 3.14159
+            children [
+              CadShape {
+                url [
+                  "../models/hover_board_wheel.obj"
+                ]
+              }
+            ]
+          }
         ]
         name "right_wheel_solid"
-        boundingObject USE LEFT_WHEEL
+        boundingObject DEF LEFT_WHEEL Cylinder {
+          height 0.07
+          radius 0.13
+        }
         physics Physics {
         }
       }
