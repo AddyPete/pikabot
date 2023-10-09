@@ -1,3 +1,3 @@
 # pikabot
 
-Webots Simulation of Two-Wheel Differential Drive Robot 🤖 skined as Pikatchu capable of SLAM (Simultaneous Localization and Mapping) and Autonomous Navigation.
+A ROS2 Package of a Webots Simulation of 2-Wheel Differential Drive Robot Capable of SLAM and Autonomous Navigation
