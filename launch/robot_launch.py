@@ -116,12 +116,11 @@ def generate_launch_description():
             webots,
             base_link_to_laser,
             footprint_publisher,
-            rviz,
+            # rviz,
             robot_state_publisher,
             joint_state_broadcaster_spawner,
             diffdrive_controller_spawner,
             my_robot_driver,
-            # footprint_publisher,
             launch.actions.RegisterEventHandler(
                 event_handler=launch.event_handlers.OnProcessExit(
                     target_action=webots,
