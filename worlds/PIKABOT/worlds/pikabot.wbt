@@ -35,8 +35,8 @@ WorldInfo {
 }
 Viewpoint {
   fieldOfView 0.5
-  orientation 0.16553893969979544 -0.1496695607103784 -0.9747799146678341 4.6012015381152676
-  position 1.1136857563062563 -3.818357606562923 1.3888414234513657
+  orientation 0.06794053655426346 -0.05318816156806 -0.9962705972584601 4.502717743162987
+  position 1.259045628635272 -2.624361462993372 0.8025326409436003
   near 1
   follow "TIAGo Iron"
   followType "None"
@@ -689,6 +689,21 @@ Robot {
         DEF BODY CadShape {
           url [
             "../models/pika.obj"
+          ]
+        }
+        Pose {
+          translation 0 0 0.365
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.960784 0.760784 0.0666667
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.05 0.02 0.053
+              }
+            }
           ]
         }
       ]
