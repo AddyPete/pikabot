@@ -1,4 +1,4 @@
-# pikabot
+# PIKABOT
 
 A ROS2 Package of a Webots Simulation of 2-Wheel Differential Drive Robot Capable of SLAM and Autonomous Navigation
 
@@ -22,6 +22,15 @@ Build with colcon and source install setup.ash
   source install/setup.bash
 ```
 
-**How to Run (Without SLAM and Navigation):**
-1) Type ros2 launch pikabot robot_launch.py
-2) Run teleop twist ROS2 package with ros2 run teleop_twist_keyboard teleop_twist_keyboard
+## How to Run (Without SLAM and Navigation)
+
+Launch the package
+
+```bash
+  ros2 launch pikabot robot_launch.py
+```
+Manually control it using teleop twist keyboard package.
+
+```bash
+  ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
