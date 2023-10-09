@@ -113,7 +113,7 @@ def generate_launch_description():
         webots,
         base_link_to_laser,
         footprint_publisher,
-        # rviz,
+        rviz,
         robot_state_publisher,
         joint_state_broadcaster_spawner,
         diffdrive_controller_spawner,
