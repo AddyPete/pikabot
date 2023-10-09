@@ -21,7 +21,14 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/computers/protos/Monitor.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/computers/protos/Keyboard.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/chairs/protos/OfficeChair.proto"
+<<<<<<< HEAD
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Rubber.proto"
+=======
+<<<<<<< HEAD
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Rubber.proto"
+=======
+>>>>>>> d9f9fcf (test)
+>>>>>>> 3ad7d1e (1st Commit)
 
 WorldInfo {
   info [
@@ -36,8 +43,18 @@ WorldInfo {
 }
 Viewpoint {
   fieldOfView 0.5
+<<<<<<< HEAD
   orientation -0.001435299244807347 0.004704613770680953 -0.9999879031895069 4.89619121191663
   position 0.31325173711184356 -2.5488629163681362 0.5056395859670034
+=======
+<<<<<<< HEAD
+  orientation -0.001435299244807347 0.004704613770680953 -0.9999879031895069 4.89619121191663
+  position 0.31325173711184356 -2.5488629163681362 0.5056395859670034
+=======
+  orientation -0.21852121320859072 -0.4958817518710045 0.8404461717083309 5.306319406800625
+  position -1.5850874349911328 2.220936880072861 1.9112331750900133
+>>>>>>> d9f9fcf (test)
+>>>>>>> 3ad7d1e (1st Commit)
   near 1
   follow "TIAGo Iron"
   followType "None"
@@ -689,7 +706,15 @@ Robot {
       children [
         DEF BODY CadShape {
           url [
+<<<<<<< HEAD
             "/home/homepc/ros2_ws/src/pikabot/worlds/PIKABOT/models/pika.mtl.obj"
+=======
+<<<<<<< HEAD
+            "/home/homepc/ros2_ws/src/pikabot/worlds/PIKABOT/models/pika.mtl.obj"
+=======
+            "/home/summo-minegears/ros2_ws/src/pikabot/worlds/PIKABOT/models/pika.mtl.obj"
+>>>>>>> d9f9fcf (test)
+>>>>>>> 3ad7d1e (1st Commit)
           ]
         }
       ]
@@ -711,6 +736,10 @@ Robot {
         translation -0.14 0.3 0.0900001
         rotation 1 4.1214851345217515e-16 2.355134362583858e-16 1.570799999999998
         children [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3ad7d1e (1st Commit)
           DEF WHEEL Shape {
             appearance Rubber {
             }
@@ -722,6 +751,27 @@ Robot {
         ]
         name "left_wheel_solid"
         boundingObject USE LEFT_WHEEL
+<<<<<<< HEAD
+=======
+=======
+          Pose {
+            translation 0 -0.13 0
+            children [
+              CadShape {
+                url [
+                  "../models/hover_board_wheel.obj"
+                ]
+              }
+            ]
+          }
+        ]
+        name "left_wheel_solid"
+        boundingObject DEF LEFT_WHEEL Cylinder {
+          height 0.07
+          radius 0.13
+        }
+>>>>>>> d9f9fcf (test)
+>>>>>>> 3ad7d1e (1st Commit)
         physics Physics {
         }
       }
@@ -743,10 +793,36 @@ Robot {
         translation -0.14 -0.3 0.0900001
         rotation 1 4.710268725167725e-16 -1.5700895750559078e-16 1.5707999999999944
         children [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3ad7d1e (1st Commit)
           USE WHEEL
         ]
         name "right_wheel_solid"
         boundingObject USE LEFT_WHEEL
+<<<<<<< HEAD
+=======
+=======
+          Pose {
+            translation 0 -0.13 0
+            rotation 0 1 0 3.14159
+            children [
+              CadShape {
+                url [
+                  "../models/hover_board_wheel.obj"
+                ]
+              }
+            ]
+          }
+        ]
+        name "right_wheel_solid"
+        boundingObject DEF LEFT_WHEEL Cylinder {
+          height 0.07
+          radius 0.13
+        }
+>>>>>>> d9f9fcf (test)
+>>>>>>> 3ad7d1e (1st Commit)
         physics Physics {
         }
       }
@@ -801,6 +877,10 @@ Robot {
         Pose {
           rotation 0 0.7071032811764938 0.7071102811792772 3.141585
           children [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3ad7d1e (1st Commit)
             HingeJoint {
               jointParameters HingeJointParameters {
                 axis 0 1 0
@@ -889,6 +969,11 @@ Robot {
                 name "lower"
               }
             }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d9f9fcf (test)
+>>>>>>> 3ad7d1e (1st Commit)
             Solid {
               translation 0 -0.01 0
               rotation -1 0 0 1.5708
@@ -900,6 +985,10 @@ Robot {
               ]
               name "lidar_solid"
             }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3ad7d1e (1st Commit)
             Transform {
               translation 0 -0.01 0
               rotation -1 0 0 1.5708
@@ -938,6 +1027,11 @@ Robot {
                 }
               ]
             }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d9f9fcf (test)
+>>>>>>> 3ad7d1e (1st Commit)
           ]
         }
       ]

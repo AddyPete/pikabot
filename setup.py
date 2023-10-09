@@ -8,6 +8,8 @@ data_files.append(('share/' + package_name + '/launch', ['launch/robot_launch.py
 data_files.append(('share/' + package_name + '/worlds/PIKABOT/worlds', ['worlds/PIKABOT/worlds/pikabot.wbt']))
 data_files.append(('share/' + package_name + '/worlds/PIKABOT/models', ['worlds/PIKABOT/models/pika.mtl.obj']))
 data_files.append(('share/' + package_name + '/worlds/PIKABOT/models', ['worlds/PIKABOT/models/pika.mtl.mtl']))
+data_files.append(('share/' + package_name + '/worlds/PIKABOT/models', ['worlds/PIKABOT/models/hover_board_wheel.obj']))
+data_files.append(('share/' + package_name + '/worlds/PIKABOT/models', ['worlds/PIKABOT/models/hover_board_wheel.mtl']))
 data_files.append(('share/' + package_name + '/resource', ['resource/pikabot.urdf']))
 data_files.append(('share/' + package_name + '/resource', ['resource/ros2control.yml']))
 data_files.append(('share/' + package_name + '/resource', ['resource/pikabot.rviz']))
